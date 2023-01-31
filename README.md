@@ -14,17 +14,17 @@ Overview
 Questions
 
 1.	Which state in the US has the highest and lowest obesity rates between males and females?
-2.	Which states is the most activity/healthiest in the US?
-3.	Which state contains the healthiest and least healthy of obese adults who have a high school graduate vs a collage gradates? 
+2.	Which states is the most active/healthiest in the US?
+3.	Which state contains the healthiest and least healthy obese adults who is a high school graduate vs a collage gradate? 
 4.	Which state contains the highest and lowest average of adults who engage in no leisure-time physical activity for the year 2020.
 
 Roles
 
 Jacob's Roles
--importing gender csv / creating the DataFrame for gender / cleaning the gender DataFrame / renaming the colunms etc in the gender DataFrame
+-importing gender csv / creating the DataFrame for gender / cleaning the gender DataFrame / renaming the colunms etc in the gender DataFrame / removing unnecessary rows
 
 Latoya's Roles
--importing education csv / creating the DataFrame for education / cleaning the education DataFrame / renaming the colunms etc in the education DataFrame
+-importing education csv / creating the DataFrame for education / cleaning the education DataFrame / renaming the colunms etc in the education DataFrame / removing unnecessary rows
 
 Julia's Roles
--importing physical acitivity csv / creating the DataFrame for physical acitivity / cleaning the physical acitivity DataFrame / renaming the colunms etc in the physical acitivity DataFrame
+-importing physical acitivity csv / creating the DataFrame for physical acitivity / cleaning the physical acitivity DataFrame / renaming the colunms etc in the physical acitivity DataFrame / removing unnecessary rows
