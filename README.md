@@ -22,9 +22,13 @@ Roles
 
 Jacob's Roles
 -importing gender csv / creating the DataFrame for gender / cleaning the gender DataFrame / renaming the colunms etc in the gender DataFrame / removing unnecessary rows
+-answered the question for: Which state in the US has the highest and lowest obesity rates between males and females? 
 
 Latoya's Roles
 -importing education csv / creating the DataFrame for education / cleaning the education DataFrame / renaming the colunms etc in the education DataFrame / removing unnecessary rows
+-answered the question for: Which state contains the healthiest and least healthy obese adults who is a high school graduate vs a collage gradate? 
 
 Julia's Roles
 -importing physical acitivity csv / creating the DataFrame for physical acitivity / cleaning the physical acitivity DataFrame / renaming the colunms etc in the physical acitivity DataFrame / removing unnecessary rows
+-answer the question for: Which state contains the highest and lowest average of adults who engage in no leisure-time physical activity for the year 2020.
+-answer the question for: Which states is the most active/healthiest in the US?
