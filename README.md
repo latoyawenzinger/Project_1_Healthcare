@@ -28,7 +28,7 @@ Jacob's Roles
 
 Latoya's Roles
 -importing education csv / creating the DataFrame for education / cleaning the education DataFrame / renaming the colunms etc in the education DataFrame / removing unnecessary rows
--answered the question for: Which state contains the healthiest and least healthy obese adults who is a high school graduate vs a collage gradate? 
+-answered the question for: Which state contains the highest percent of obese adults based on education level? 
 -Visualization: Graphs based on those questions
 
 Julia's Roles
