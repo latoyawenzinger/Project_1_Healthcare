@@ -38,5 +38,5 @@ Julia's Roles
 -Visualization: Graphs based on the question (bar and pie chart)
 
 Daniel's Role
--Analysis and Conclusion 
+-analyising all data and making sure they all make sense / writing a summary for all major findings / recalling the major talking points / concluding the project 
 
