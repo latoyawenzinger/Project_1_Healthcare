@@ -38,4 +38,5 @@ Julia's Roles
 -Visualization: Graphs based on the question (bar and pie chart)
 
 Daniel's Role
--
+-Analysis and Conclusion 
+
