@@ -34,7 +34,7 @@ Latoya's Roles
 Julia's Roles
 -importing physical acitivity csv / creating the DataFrame for physical acitivity / cleaning the physical acitivity DataFrame / renaming the colunms etc in the physical acitivity DataFrame / removing unnecessary rows
 -answer the question for: Which state contains the highest and lowest average of adults who are physically activity for the year 2020.
--Visualization: Graphs based on those questions
+-Visualization: Graphs based on the question (bar and pie chart)
 
 Daniel's Role
 -
