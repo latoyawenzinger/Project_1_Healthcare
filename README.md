@@ -13,7 +13,7 @@ Overview
 
 Questions
 
-1.	Which state in the US has the highest and lowest obesity rates between males and females?
+1.	What are the obesity rates of US states broken down by gender?
 2.	Which states is the most active/healthiest in the US?
 3.	Which state contains the healthiest and least healthy obese adults in the categories of: less than high school, high school graduate, collage gradate, and some college or technical school?
 4.	Which state contains the highest and lowest average of adults who are physical activity for the year 2020.
