@@ -1,6 +1,6 @@
 # Project_1_Healthcare
 
-Team members: Daniel Cols, Jacob Skyes, Latoya Wenzinger, and Julia Tinkey
+Team members: Daniel Cols, Jacob Sykes, Latoya Wenzinger, and Julia Tinkey
 
 Topic: HEALTHCARE: Adults who have obesity (year 2020) compares to several different categories
 
