@@ -23,7 +23,7 @@ Roles
 
 Jacob's Roles
 -importing gender csv / creating the DataFrame for gender / cleaning the gender DataFrame / renaming the colunms etc in the gender DataFrame / removing unnecessary rows
--answered the question for: Which state in the US has the highest and lowest obesity rates between males and females? 
+-answered the question for: What are the obesity rates of US states broken down by gender? 
 -Visualization: Graphs based on those questions 
 
 Latoya's Roles
