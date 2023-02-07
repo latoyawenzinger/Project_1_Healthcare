@@ -15,7 +15,7 @@ Questions
 
 1.	Which state in the US has the highest and lowest obesity rates between males and females?
 2.	Which states is the most active/healthiest in the locations?
-3.	Which location contains the healthiest and least healthy obese adults in the categories of: less than high school, high school graduate, collage gradate, and some college or technical school?
+3.	Which location contains the healthiest and least healthy obese adults in the categories of: less than high school, high school graduate, college  graduate, and some college or technical school?
 4.	Which location contains the highest and lowest average of adults who are physical activity for the year 2020.
 
 
