@@ -14634,69 +14634,34 @@ div.jp-OutputPrompt {
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 
 <div class="reveal">
-<div class="slides"><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="slides"><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="HEALTHCARE:-Adults-who-have-obesity-(year-2020)-compared-to-physical-activity,-education,-and-gender">HEALTHCARE: Adults who have obesity (year 2020) compared to physical activity, education, and gender<a class="anchor-link" href="#HEALTHCARE:-Adults-who-have-obesity-(year-2020)-compared-to-physical-activity,-education,-and-gender">&#182;</a></h1>
+</div>
+</div>
+</div>
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Dependencies</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
 
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-Bad key &#34;text.kerning_factor&#34; on line 4 in
-/opt/anaconda3/envs/PythonData/lib/python3.7/site-packages/matplotlib/mpl-data/stylelib/_classic_test_patch.mplstyle.
-You probably need to get an updated matplotlibrc file from
-https://github.com/matplotlib/matplotlib/blob/v3.1.3/matplotlibrc.template
-or from the matplotlib source distribution
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div></section></section><section><section>
@@ -15138,13 +15103,13 @@ or from the matplotlib source distribution
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Drop the data you don&#39;t need</span>
 
 <span class="n">activity_clean_df</span> <span class="o">=</span> <span class="n">activity_clean_df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;any&#39;</span><span class="p">)</span>
-<span class="n">activity_clean_df</span>
+<span class="n">activity_clean_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15162,7 +15127,7 @@ or from the matplotlib source distribution
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[42]:</div>
 
 
 
@@ -15185,11 +15150,11 @@ or from the matplotlib source distribution
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Description</th>
-      <th>LocationDesc</th>
+      <th>Year</th>
+      <th>Location</th>
       <th>Class</th>
       <th>Question</th>
-      <th>Data_Value</th>
+      <th>Active Average (%)</th>
     </tr>
   </thead>
   <tbody>
@@ -15233,398 +15198,6 @@ or from the matplotlib source distribution
       <td>Percent of adults who engage in no leisure-tim...</td>
       <td>29.7</td>
     </tr>
-    <tr>
-      <th>5</th>
-      <td>2020.0</td>
-      <td>California</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>21.2</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>2020.0</td>
-      <td>Colorado</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>16.6</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>2020.0</td>
-      <td>Connecticut</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>20.6</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>2020.0</td>
-      <td>Delaware</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.7</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>2020.0</td>
-      <td>District of Columbia</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>18.1</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>2020.0</td>
-      <td>Florida</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>26.8</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>2020.0</td>
-      <td>Georgia</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.8</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>2020.0</td>
-      <td>Hawaii</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>19.2</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>2020.0</td>
-      <td>Idaho</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>20.5</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>2020.0</td>
-      <td>Illinois</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.3</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>2020.0</td>
-      <td>Indiana</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>26.3</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>2020.0</td>
-      <td>Iowa</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>23.6</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>2020.0</td>
-      <td>Kansas</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>22.0</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>2020.0</td>
-      <td>Kentucky</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>30.6</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>2020.0</td>
-      <td>Louisiana</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>29.0</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>2020.0</td>
-      <td>Maine</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>21.5</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>2020.0</td>
-      <td>Maryland</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>21.0</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>2020.0</td>
-      <td>Massachusetts</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>19.9</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>2020.0</td>
-      <td>Michigan</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>20.8</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>2020.0</td>
-      <td>Minnesota</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>19.1</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>2020.0</td>
-      <td>Mississippi</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>30.0</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>2020.0</td>
-      <td>Missouri</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.7</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>2020.0</td>
-      <td>Montana</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>18.9</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>2020.0</td>
-      <td>Nebraska</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>21.5</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>2020.0</td>
-      <td>Nevada</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.4</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>2020.0</td>
-      <td>New Hampshire</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>19.3</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td>2020.0</td>
-      <td>New Jersey</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>21.0</td>
-    </tr>
-    <tr>
-      <th>32</th>
-      <td>2020.0</td>
-      <td>New Mexico</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>23.0</td>
-    </tr>
-    <tr>
-      <th>33</th>
-      <td>2020.0</td>
-      <td>New York</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.6</td>
-    </tr>
-    <tr>
-      <th>34</th>
-      <td>2020.0</td>
-      <td>North Carolina</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>22.7</td>
-    </tr>
-    <tr>
-      <th>35</th>
-      <td>2020.0</td>
-      <td>North Dakota</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.6</td>
-    </tr>
-    <tr>
-      <th>36</th>
-      <td>2020.0</td>
-      <td>Ohio</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.5</td>
-    </tr>
-    <tr>
-      <th>37</th>
-      <td>2020.0</td>
-      <td>Oklahoma</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>28.6</td>
-    </tr>
-    <tr>
-      <th>38</th>
-      <td>2020.0</td>
-      <td>Oregon</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>18.5</td>
-    </tr>
-    <tr>
-      <th>39</th>
-      <td>2020.0</td>
-      <td>Pennsylvania</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.5</td>
-    </tr>
-    <tr>
-      <th>40</th>
-      <td>2020.0</td>
-      <td>Rhode Island</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>23.5</td>
-    </tr>
-    <tr>
-      <th>41</th>
-      <td>2020.0</td>
-      <td>South Carolina</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>26.6</td>
-    </tr>
-    <tr>
-      <th>42</th>
-      <td>2020.0</td>
-      <td>South Dakota</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>22.4</td>
-    </tr>
-    <tr>
-      <th>43</th>
-      <td>2020.0</td>
-      <td>Tennessee</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.5</td>
-    </tr>
-    <tr>
-      <th>44</th>
-      <td>2020.0</td>
-      <td>Texas</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.6</td>
-    </tr>
-    <tr>
-      <th>45</th>
-      <td>2020.0</td>
-      <td>Utah</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>15.9</td>
-    </tr>
-    <tr>
-      <th>46</th>
-      <td>2020.0</td>
-      <td>Vermont</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>18.2</td>
-    </tr>
-    <tr>
-      <th>47</th>
-      <td>2020.0</td>
-      <td>Virginia</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>20.9</td>
-    </tr>
-    <tr>
-      <th>48</th>
-      <td>2020.0</td>
-      <td>Washington</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>17.8</td>
-    </tr>
-    <tr>
-      <th>49</th>
-      <td>2020.0</td>
-      <td>West Virginia</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>29.7</td>
-    </tr>
-    <tr>
-      <th>50</th>
-      <td>2020.0</td>
-      <td>Wisconsin</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>20.5</td>
-    </tr>
-    <tr>
-      <th>51</th>
-      <td>2020.0</td>
-      <td>Wyoming</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>22.4</td>
-    </tr>
-    <tr>
-      <th>52</th>
-      <td>2020.0</td>
-      <td>Guam</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.8</td>
-    </tr>
-    <tr>
-      <th>53</th>
-      <td>2020.0</td>
-      <td>Puerto Rico</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>45.8</td>
-    </tr>
   </tbody>
 </table>
 </div>
@@ -15641,7 +15214,7 @@ or from the matplotlib source distribution
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Rename the Column names</span>
@@ -15649,7 +15222,7 @@ or from the matplotlib source distribution
 
 <span class="n">activity_clean_df</span> <span class="o">=</span> <span class="n">activity_clean_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Description&quot;</span><span class="p">:</span> <span class="s2">&quot;Year&quot;</span><span class="p">,</span> 
                                     <span class="s2">&quot;LocationDesc&quot;</span><span class="p">:</span> <span class="s2">&quot;Location&quot;</span><span class="p">,</span> <span class="s2">&quot;Data_Value&quot;</span> <span class="p">:</span> <span class="s2">&quot;Active Average (%)&quot;</span><span class="p">,})</span>
-<span class="n">activity_clean_df</span>
+<span class="n">activity_clean_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15667,7 +15240,7 @@ or from the matplotlib source distribution
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[43]:</div>
 
 
 
@@ -15738,398 +15311,6 @@ or from the matplotlib source distribution
       <td>Percent of adults who engage in no leisure-tim...</td>
       <td>29.7</td>
     </tr>
-    <tr>
-      <th>5</th>
-      <td>2020.0</td>
-      <td>California</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>21.2</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>2020.0</td>
-      <td>Colorado</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>16.6</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>2020.0</td>
-      <td>Connecticut</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>20.6</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>2020.0</td>
-      <td>Delaware</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.7</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>2020.0</td>
-      <td>District of Columbia</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>18.1</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>2020.0</td>
-      <td>Florida</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>26.8</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>2020.0</td>
-      <td>Georgia</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.8</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>2020.0</td>
-      <td>Hawaii</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>19.2</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>2020.0</td>
-      <td>Idaho</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>20.5</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>2020.0</td>
-      <td>Illinois</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.3</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>2020.0</td>
-      <td>Indiana</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>26.3</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>2020.0</td>
-      <td>Iowa</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>23.6</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>2020.0</td>
-      <td>Kansas</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>22.0</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>2020.0</td>
-      <td>Kentucky</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>30.6</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>2020.0</td>
-      <td>Louisiana</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>29.0</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>2020.0</td>
-      <td>Maine</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>21.5</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>2020.0</td>
-      <td>Maryland</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>21.0</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>2020.0</td>
-      <td>Massachusetts</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>19.9</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>2020.0</td>
-      <td>Michigan</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>20.8</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>2020.0</td>
-      <td>Minnesota</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>19.1</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>2020.0</td>
-      <td>Mississippi</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>30.0</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>2020.0</td>
-      <td>Missouri</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.7</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>2020.0</td>
-      <td>Montana</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>18.9</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>2020.0</td>
-      <td>Nebraska</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>21.5</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>2020.0</td>
-      <td>Nevada</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.4</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>2020.0</td>
-      <td>New Hampshire</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>19.3</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td>2020.0</td>
-      <td>New Jersey</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>21.0</td>
-    </tr>
-    <tr>
-      <th>32</th>
-      <td>2020.0</td>
-      <td>New Mexico</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>23.0</td>
-    </tr>
-    <tr>
-      <th>33</th>
-      <td>2020.0</td>
-      <td>New York</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.6</td>
-    </tr>
-    <tr>
-      <th>34</th>
-      <td>2020.0</td>
-      <td>North Carolina</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>22.7</td>
-    </tr>
-    <tr>
-      <th>35</th>
-      <td>2020.0</td>
-      <td>North Dakota</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.6</td>
-    </tr>
-    <tr>
-      <th>36</th>
-      <td>2020.0</td>
-      <td>Ohio</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.5</td>
-    </tr>
-    <tr>
-      <th>37</th>
-      <td>2020.0</td>
-      <td>Oklahoma</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>28.6</td>
-    </tr>
-    <tr>
-      <th>38</th>
-      <td>2020.0</td>
-      <td>Oregon</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>18.5</td>
-    </tr>
-    <tr>
-      <th>39</th>
-      <td>2020.0</td>
-      <td>Pennsylvania</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.5</td>
-    </tr>
-    <tr>
-      <th>40</th>
-      <td>2020.0</td>
-      <td>Rhode Island</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>23.5</td>
-    </tr>
-    <tr>
-      <th>41</th>
-      <td>2020.0</td>
-      <td>South Carolina</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>26.6</td>
-    </tr>
-    <tr>
-      <th>42</th>
-      <td>2020.0</td>
-      <td>South Dakota</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>22.4</td>
-    </tr>
-    <tr>
-      <th>43</th>
-      <td>2020.0</td>
-      <td>Tennessee</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.5</td>
-    </tr>
-    <tr>
-      <th>44</th>
-      <td>2020.0</td>
-      <td>Texas</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.6</td>
-    </tr>
-    <tr>
-      <th>45</th>
-      <td>2020.0</td>
-      <td>Utah</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>15.9</td>
-    </tr>
-    <tr>
-      <th>46</th>
-      <td>2020.0</td>
-      <td>Vermont</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>18.2</td>
-    </tr>
-    <tr>
-      <th>47</th>
-      <td>2020.0</td>
-      <td>Virginia</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>20.9</td>
-    </tr>
-    <tr>
-      <th>48</th>
-      <td>2020.0</td>
-      <td>Washington</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>17.8</td>
-    </tr>
-    <tr>
-      <th>49</th>
-      <td>2020.0</td>
-      <td>West Virginia</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>29.7</td>
-    </tr>
-    <tr>
-      <th>50</th>
-      <td>2020.0</td>
-      <td>Wisconsin</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>20.5</td>
-    </tr>
-    <tr>
-      <th>51</th>
-      <td>2020.0</td>
-      <td>Wyoming</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>22.4</td>
-    </tr>
-    <tr>
-      <th>52</th>
-      <td>2020.0</td>
-      <td>Guam</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.8</td>
-    </tr>
-    <tr>
-      <th>53</th>
-      <td>2020.0</td>
-      <td>Puerto Rico</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>45.8</td>
-    </tr>
   </tbody>
 </table>
 </div>
@@ -16146,13 +15327,13 @@ or from the matplotlib source distribution
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Delete the unnecessary row &quot;national&quot;</span>
 
 <span class="n">activity_final_df</span><span class="o">=</span><span class="n">activity_clean_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">activity_clean_df</span><span class="o">.</span><span class="n">index</span><span class="p">[[</span><span class="mi">0</span><span class="p">]])</span>
-<span class="n">activity_final_df</span>
+<span class="n">activity_final_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -16170,7 +15351,7 @@ or from the matplotlib source distribution
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[44]:</div>
 
 
 
@@ -16241,390 +15422,6 @@ or from the matplotlib source distribution
       <td>Percent of adults who engage in no leisure-tim...</td>
       <td>21.2</td>
     </tr>
-    <tr>
-      <th>6</th>
-      <td>2020.0</td>
-      <td>Colorado</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>16.6</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>2020.0</td>
-      <td>Connecticut</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>20.6</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>2020.0</td>
-      <td>Delaware</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.7</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>2020.0</td>
-      <td>District of Columbia</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>18.1</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>2020.0</td>
-      <td>Florida</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>26.8</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>2020.0</td>
-      <td>Georgia</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.8</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>2020.0</td>
-      <td>Hawaii</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>19.2</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>2020.0</td>
-      <td>Idaho</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>20.5</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>2020.0</td>
-      <td>Illinois</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.3</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>2020.0</td>
-      <td>Indiana</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>26.3</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>2020.0</td>
-      <td>Iowa</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>23.6</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>2020.0</td>
-      <td>Kansas</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>22.0</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>2020.0</td>
-      <td>Kentucky</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>30.6</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>2020.0</td>
-      <td>Louisiana</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>29.0</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>2020.0</td>
-      <td>Maine</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>21.5</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>2020.0</td>
-      <td>Maryland</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>21.0</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>2020.0</td>
-      <td>Massachusetts</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>19.9</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>2020.0</td>
-      <td>Michigan</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>20.8</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>2020.0</td>
-      <td>Minnesota</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>19.1</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>2020.0</td>
-      <td>Mississippi</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>30.0</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>2020.0</td>
-      <td>Missouri</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.7</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>2020.0</td>
-      <td>Montana</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>18.9</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>2020.0</td>
-      <td>Nebraska</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>21.5</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>2020.0</td>
-      <td>Nevada</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.4</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>2020.0</td>
-      <td>New Hampshire</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>19.3</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td>2020.0</td>
-      <td>New Jersey</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>21.0</td>
-    </tr>
-    <tr>
-      <th>32</th>
-      <td>2020.0</td>
-      <td>New Mexico</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>23.0</td>
-    </tr>
-    <tr>
-      <th>33</th>
-      <td>2020.0</td>
-      <td>New York</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.6</td>
-    </tr>
-    <tr>
-      <th>34</th>
-      <td>2020.0</td>
-      <td>North Carolina</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>22.7</td>
-    </tr>
-    <tr>
-      <th>35</th>
-      <td>2020.0</td>
-      <td>North Dakota</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.6</td>
-    </tr>
-    <tr>
-      <th>36</th>
-      <td>2020.0</td>
-      <td>Ohio</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.5</td>
-    </tr>
-    <tr>
-      <th>37</th>
-      <td>2020.0</td>
-      <td>Oklahoma</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>28.6</td>
-    </tr>
-    <tr>
-      <th>38</th>
-      <td>2020.0</td>
-      <td>Oregon</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>18.5</td>
-    </tr>
-    <tr>
-      <th>39</th>
-      <td>2020.0</td>
-      <td>Pennsylvania</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.5</td>
-    </tr>
-    <tr>
-      <th>40</th>
-      <td>2020.0</td>
-      <td>Rhode Island</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>23.5</td>
-    </tr>
-    <tr>
-      <th>41</th>
-      <td>2020.0</td>
-      <td>South Carolina</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>26.6</td>
-    </tr>
-    <tr>
-      <th>42</th>
-      <td>2020.0</td>
-      <td>South Dakota</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>22.4</td>
-    </tr>
-    <tr>
-      <th>43</th>
-      <td>2020.0</td>
-      <td>Tennessee</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.5</td>
-    </tr>
-    <tr>
-      <th>44</th>
-      <td>2020.0</td>
-      <td>Texas</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.6</td>
-    </tr>
-    <tr>
-      <th>45</th>
-      <td>2020.0</td>
-      <td>Utah</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>15.9</td>
-    </tr>
-    <tr>
-      <th>46</th>
-      <td>2020.0</td>
-      <td>Vermont</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>18.2</td>
-    </tr>
-    <tr>
-      <th>47</th>
-      <td>2020.0</td>
-      <td>Virginia</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>20.9</td>
-    </tr>
-    <tr>
-      <th>48</th>
-      <td>2020.0</td>
-      <td>Washington</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>17.8</td>
-    </tr>
-    <tr>
-      <th>49</th>
-      <td>2020.0</td>
-      <td>West Virginia</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>29.7</td>
-    </tr>
-    <tr>
-      <th>50</th>
-      <td>2020.0</td>
-      <td>Wisconsin</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>20.5</td>
-    </tr>
-    <tr>
-      <th>51</th>
-      <td>2020.0</td>
-      <td>Wyoming</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>22.4</td>
-    </tr>
-    <tr>
-      <th>52</th>
-      <td>2020.0</td>
-      <td>Guam</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.8</td>
-    </tr>
-    <tr>
-      <th>53</th>
-      <td>2020.0</td>
-      <td>Puerto Rico</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>45.8</td>
-    </tr>
   </tbody>
 </table>
 </div>
@@ -16641,14 +15438,14 @@ or from the matplotlib source distribution
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># sort obesity for Lowest to hightest</span>
 <span class="c1"># The best location</span>
 
 <span class="n">best</span> <span class="o">=</span> <span class="n">activity_final_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;Active Average (%)&quot;</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">best</span>
+<span class="n">best</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -16666,7 +15463,7 @@ or from the matplotlib source distribution
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[45]:</div>
 
 
 
@@ -16736,390 +15533,6 @@ or from the matplotlib source distribution
       <td>Physical Activity</td>
       <td>Percent of adults who engage in no leisure-tim...</td>
       <td>29.7</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>2020.0</td>
-      <td>Louisiana</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>29.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2020.0</td>
-      <td>Alabama</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>28.8</td>
-    </tr>
-    <tr>
-      <th>37</th>
-      <td>2020.0</td>
-      <td>Oklahoma</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>28.6</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>2020.0</td>
-      <td>Florida</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>26.8</td>
-    </tr>
-    <tr>
-      <th>41</th>
-      <td>2020.0</td>
-      <td>South Carolina</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>26.6</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>2020.0</td>
-      <td>Indiana</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>26.3</td>
-    </tr>
-    <tr>
-      <th>52</th>
-      <td>2020.0</td>
-      <td>Guam</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.8</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>2020.0</td>
-      <td>Missouri</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.7</td>
-    </tr>
-    <tr>
-      <th>33</th>
-      <td>2020.0</td>
-      <td>New York</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.6</td>
-    </tr>
-    <tr>
-      <th>44</th>
-      <td>2020.0</td>
-      <td>Texas</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.6</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>2020.0</td>
-      <td>Nevada</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.4</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>2020.0</td>
-      <td>Illinois</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.3</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>2020.0</td>
-      <td>Georgia</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.8</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>2020.0</td>
-      <td>Delaware</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.7</td>
-    </tr>
-    <tr>
-      <th>35</th>
-      <td>2020.0</td>
-      <td>North Dakota</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.6</td>
-    </tr>
-    <tr>
-      <th>43</th>
-      <td>2020.0</td>
-      <td>Tennessee</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.5</td>
-    </tr>
-    <tr>
-      <th>36</th>
-      <td>2020.0</td>
-      <td>Ohio</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.5</td>
-    </tr>
-    <tr>
-      <th>39</th>
-      <td>2020.0</td>
-      <td>Pennsylvania</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.5</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>2020.0</td>
-      <td>Iowa</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>23.6</td>
-    </tr>
-    <tr>
-      <th>40</th>
-      <td>2020.0</td>
-      <td>Rhode Island</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>23.5</td>
-    </tr>
-    <tr>
-      <th>32</th>
-      <td>2020.0</td>
-      <td>New Mexico</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>23.0</td>
-    </tr>
-    <tr>
-      <th>34</th>
-      <td>2020.0</td>
-      <td>North Carolina</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>22.7</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2020.0</td>
-      <td>Arizona</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>22.4</td>
-    </tr>
-    <tr>
-      <th>51</th>
-      <td>2020.0</td>
-      <td>Wyoming</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>22.4</td>
-    </tr>
-    <tr>
-      <th>42</th>
-      <td>2020.0</td>
-      <td>South Dakota</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>22.4</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>2020.0</td>
-      <td>Kansas</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>22.0</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>2020.0</td>
-      <td>Maine</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>21.5</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>2020.0</td>
-      <td>Nebraska</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>21.5</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2020.0</td>
-      <td>Alaska</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>21.3</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>2020.0</td>
-      <td>California</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>21.2</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td>2020.0</td>
-      <td>New Jersey</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>21.0</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>2020.0</td>
-      <td>Maryland</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>21.0</td>
-    </tr>
-    <tr>
-      <th>47</th>
-      <td>2020.0</td>
-      <td>Virginia</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>20.9</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>2020.0</td>
-      <td>Michigan</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>20.8</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>2020.0</td>
-      <td>Connecticut</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>20.6</td>
-    </tr>
-    <tr>
-      <th>50</th>
-      <td>2020.0</td>
-      <td>Wisconsin</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>20.5</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>2020.0</td>
-      <td>Idaho</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>20.5</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>2020.0</td>
-      <td>Massachusetts</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>19.9</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>2020.0</td>
-      <td>New Hampshire</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>19.3</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>2020.0</td>
-      <td>Hawaii</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>19.2</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>2020.0</td>
-      <td>Minnesota</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>19.1</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>2020.0</td>
-      <td>Montana</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>18.9</td>
-    </tr>
-    <tr>
-      <th>38</th>
-      <td>2020.0</td>
-      <td>Oregon</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>18.5</td>
-    </tr>
-    <tr>
-      <th>46</th>
-      <td>2020.0</td>
-      <td>Vermont</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>18.2</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>2020.0</td>
-      <td>District of Columbia</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>18.1</td>
-    </tr>
-    <tr>
-      <th>48</th>
-      <td>2020.0</td>
-      <td>Washington</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>17.8</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>2020.0</td>
-      <td>Colorado</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>16.6</td>
-    </tr>
-    <tr>
-      <th>45</th>
-      <td>2020.0</td>
-      <td>Utah</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>15.9</td>
     </tr>
   </tbody>
 </table>
@@ -17137,14 +15550,14 @@ or from the matplotlib source distribution
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># sort obesity for Lowest to hightest</span>
 <span class="c1"># The worst location</span>
 
 <span class="n">worst</span> <span class="o">=</span> <span class="n">activity_final_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;Active Average (%)&quot;</span><span class="p">)</span>
-<span class="n">worst</span>
+<span class="n">worst</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -17162,7 +15575,7 @@ or from the matplotlib source distribution
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[46]:</div>
 
 
 
@@ -17232,390 +15645,6 @@ or from the matplotlib source distribution
       <td>Physical Activity</td>
       <td>Percent of adults who engage in no leisure-tim...</td>
       <td>18.2</td>
-    </tr>
-    <tr>
-      <th>38</th>
-      <td>2020.0</td>
-      <td>Oregon</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>18.5</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>2020.0</td>
-      <td>Montana</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>18.9</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>2020.0</td>
-      <td>Minnesota</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>19.1</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>2020.0</td>
-      <td>Hawaii</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>19.2</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>2020.0</td>
-      <td>New Hampshire</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>19.3</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>2020.0</td>
-      <td>Massachusetts</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>19.9</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>2020.0</td>
-      <td>Idaho</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>20.5</td>
-    </tr>
-    <tr>
-      <th>50</th>
-      <td>2020.0</td>
-      <td>Wisconsin</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>20.5</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>2020.0</td>
-      <td>Connecticut</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>20.6</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>2020.0</td>
-      <td>Michigan</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>20.8</td>
-    </tr>
-    <tr>
-      <th>47</th>
-      <td>2020.0</td>
-      <td>Virginia</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>20.9</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td>2020.0</td>
-      <td>New Jersey</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>21.0</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>2020.0</td>
-      <td>Maryland</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>21.0</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>2020.0</td>
-      <td>California</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>21.2</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2020.0</td>
-      <td>Alaska</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>21.3</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>2020.0</td>
-      <td>Maine</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>21.5</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>2020.0</td>
-      <td>Nebraska</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>21.5</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>2020.0</td>
-      <td>Kansas</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>22.0</td>
-    </tr>
-    <tr>
-      <th>51</th>
-      <td>2020.0</td>
-      <td>Wyoming</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>22.4</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2020.0</td>
-      <td>Arizona</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>22.4</td>
-    </tr>
-    <tr>
-      <th>42</th>
-      <td>2020.0</td>
-      <td>South Dakota</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>22.4</td>
-    </tr>
-    <tr>
-      <th>34</th>
-      <td>2020.0</td>
-      <td>North Carolina</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>22.7</td>
-    </tr>
-    <tr>
-      <th>32</th>
-      <td>2020.0</td>
-      <td>New Mexico</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>23.0</td>
-    </tr>
-    <tr>
-      <th>40</th>
-      <td>2020.0</td>
-      <td>Rhode Island</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>23.5</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>2020.0</td>
-      <td>Iowa</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>23.6</td>
-    </tr>
-    <tr>
-      <th>39</th>
-      <td>2020.0</td>
-      <td>Pennsylvania</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.5</td>
-    </tr>
-    <tr>
-      <th>36</th>
-      <td>2020.0</td>
-      <td>Ohio</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.5</td>
-    </tr>
-    <tr>
-      <th>43</th>
-      <td>2020.0</td>
-      <td>Tennessee</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.5</td>
-    </tr>
-    <tr>
-      <th>35</th>
-      <td>2020.0</td>
-      <td>North Dakota</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.6</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>2020.0</td>
-      <td>Delaware</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.7</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>2020.0</td>
-      <td>Georgia</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>24.8</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>2020.0</td>
-      <td>Illinois</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.3</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>2020.0</td>
-      <td>Nevada</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.4</td>
-    </tr>
-    <tr>
-      <th>44</th>
-      <td>2020.0</td>
-      <td>Texas</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.6</td>
-    </tr>
-    <tr>
-      <th>33</th>
-      <td>2020.0</td>
-      <td>New York</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.6</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>2020.0</td>
-      <td>Missouri</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.7</td>
-    </tr>
-    <tr>
-      <th>52</th>
-      <td>2020.0</td>
-      <td>Guam</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>25.8</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>2020.0</td>
-      <td>Indiana</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>26.3</td>
-    </tr>
-    <tr>
-      <th>41</th>
-      <td>2020.0</td>
-      <td>South Carolina</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>26.6</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>2020.0</td>
-      <td>Florida</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>26.8</td>
-    </tr>
-    <tr>
-      <th>37</th>
-      <td>2020.0</td>
-      <td>Oklahoma</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>28.6</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2020.0</td>
-      <td>Alabama</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>28.8</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>2020.0</td>
-      <td>Louisiana</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>29.0</td>
-    </tr>
-    <tr>
-      <th>49</th>
-      <td>2020.0</td>
-      <td>West Virginia</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>29.7</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2020.0</td>
-      <td>Arkansas</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>29.7</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>2020.0</td>
-      <td>Mississippi</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>30.0</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>2020.0</td>
-      <td>Kentucky</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>30.6</td>
-    </tr>
-    <tr>
-      <th>53</th>
-      <td>2020.0</td>
-      <td>Puerto Rico</td>
-      <td>Physical Activity</td>
-      <td>Percent of adults who engage in no leisure-tim...</td>
-      <td>45.8</td>
     </tr>
   </tbody>
 </table>
@@ -18308,7 +16337,7 @@ class="
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -18421,7 +16450,7 @@ class="
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -18531,7 +16560,7 @@ class="
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -18641,7 +16670,7 @@ class="
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -18754,7 +16783,7 @@ class="
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -18866,7 +16895,7 @@ class="
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -18978,7 +17007,7 @@ class="
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -19090,7 +17119,7 @@ class="
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -19142,7 +17171,7 @@ jp-needs-light-background
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -19194,7 +17223,7 @@ jp-needs-light-background
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -19246,7 +17275,7 @@ jp-needs-light-background
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -19298,7 +17327,7 @@ jp-needs-light-background
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -19358,7 +17387,7 @@ class="
 
 </div>
 
-</div>
+</div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -19369,19 +17398,19 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import file and read csv</span>
 <span class="n">file</span> <span class="o">=</span> <span class="s2">&quot;Resources/gender_obesity.csv&quot;</span>
 
 <span class="n">o_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-<span class="n">o_df</span>
+<span class="n">o_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -19399,7 +17428,7 @@ class="
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[28]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[47]:</div>
 
 
 
@@ -19566,153 +17595,9 @@ class="
       <td>NaN</td>
       <td>NaN</td>
     </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>112</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>Division of Nutrition, Physical Activity, and ...</td>
-      <td>/nccdphp/dnpao/index.html</td>
-      <td>Related Links</td>
-    </tr>
-    <tr>
-      <th>113</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>Physical Activity</td>
-      <td>/physicalactivity/index.html</td>
-      <td>Related Links</td>
-    </tr>
-    <tr>
-      <th>114</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>Chronic Disease Prevention and Health Promotion</td>
-      <td>/chronicdisease/index.htm</td>
-      <td>Related Links</td>
-    </tr>
-    <tr>
-      <th>115</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>Overweight and Obesity</td>
-      <td>/obesity/index.html</td>
-      <td>Related Links</td>
-    </tr>
-    <tr>
-      <th>116</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>State and Local Programs</td>
-      <td>/nccdphp/dnpao/state-local-programs/index.html</td>
-      <td>Related Links</td>
-    </tr>
   </tbody>
 </table>
-<p>117 rows × 43 columns</p>
+<p>5 rows × 43 columns</p>
 </div>
 </div>
 
@@ -19777,17 +17662,17 @@ class="
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Delete extraneous columns</span>
 <span class="n">o_clean_df</span> <span class="o">=</span> <span class="n">o_df</span><span class="p">[[</span><span class="s1">&#39;Description&#39;</span><span class="p">,</span><span class="s1">&#39;LocationDesc&#39;</span><span class="p">,</span><span class="s1">&#39;Class&#39;</span><span class="p">,</span> <span class="s1">&#39;Question&#39;</span><span class="p">,</span><span class="s1">&#39;Data_Value&#39;</span><span class="p">,</span><span class="s1">&#39;Stratification1&#39;</span><span class="p">]]</span>
-<span class="n">o_clean_df</span>
+<span class="n">o_clean_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -19805,7 +17690,7 @@ class="
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[30]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[48]:</div>
 
 
 
@@ -19882,63 +17767,8 @@ class="
       <td>33.8</td>
       <td>Male</td>
     </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>112</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>113</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>114</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>115</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>116</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
   </tbody>
 </table>
-<p>117 rows × 6 columns</p>
 </div>
 </div>
 
@@ -19948,7 +17778,7 @@ class="
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -19996,7 +17826,7 @@ dtype: int64</pre>
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -20013,7 +17843,7 @@ dtype: int64</pre>
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -20182,17 +18012,17 @@ dtype: int64</pre>
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Rename columns</span>
 <span class="n">o_clean_df</span> <span class="o">=</span> <span class="n">o_clean_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Description&quot;</span><span class="p">:</span><span class="s2">&quot;Year&quot;</span><span class="p">,</span><span class="s2">&quot;LocationDesc&quot;</span><span class="p">:</span><span class="s2">&quot;Location&quot;</span><span class="p">,</span><span class="s2">&quot;Data_Value&quot;</span><span class="p">:</span><span class="s2">&quot;Obese Average (%)&quot;</span><span class="p">,</span><span class="s2">&quot;Stratification1&quot;</span><span class="p">:</span><span class="s2">&quot;Gender&quot;</span><span class="p">})</span>
-<span class="n">o_clean_df</span>
+<span class="n">o_clean_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
             
 </pre></div>
 
@@ -20211,7 +18041,7 @@ dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[34]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[49]:</div>
 
 
 
@@ -20288,63 +18118,8 @@ dtype: int64</pre>
       <td>33.8</td>
       <td>Male</td>
     </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>103</th>
-      <td>2020.0</td>
-      <td>Wyoming</td>
-      <td>Obesity / Weight Status</td>
-      <td>Percent of adults aged 18 years and older who ...</td>
-      <td>31.4</td>
-      <td>Female</td>
-    </tr>
-    <tr>
-      <th>104</th>
-      <td>2020.0</td>
-      <td>Guam</td>
-      <td>Obesity / Weight Status</td>
-      <td>Percent of adults aged 18 years and older who ...</td>
-      <td>33.8</td>
-      <td>Male</td>
-    </tr>
-    <tr>
-      <th>105</th>
-      <td>2020.0</td>
-      <td>Guam</td>
-      <td>Obesity / Weight Status</td>
-      <td>Percent of adults aged 18 years and older who ...</td>
-      <td>35.1</td>
-      <td>Female</td>
-    </tr>
-    <tr>
-      <th>106</th>
-      <td>2020.0</td>
-      <td>Puerto Rico</td>
-      <td>Obesity / Weight Status</td>
-      <td>Percent of adults aged 18 years and older who ...</td>
-      <td>28.4</td>
-      <td>Male</td>
-    </tr>
-    <tr>
-      <th>107</th>
-      <td>2020.0</td>
-      <td>Puerto Rico</td>
-      <td>Obesity / Weight Status</td>
-      <td>Percent of adults aged 18 years and older who ...</td>
-      <td>34.1</td>
-      <td>Female</td>
-    </tr>
   </tbody>
 </table>
-<p>108 rows × 6 columns</p>
 </div>
 </div>
 
@@ -20354,17 +18129,17 @@ dtype: int64</pre>
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Remove national rows</span>
 <span class="n">o_final_df</span> <span class="o">=</span> <span class="n">o_clean_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">o_clean_df</span><span class="o">.</span><span class="n">index</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
-<span class="n">o_final_df</span>
+<span class="n">o_final_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -20382,7 +18157,7 @@ dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[35]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[50]:</div>
 
 
 
@@ -20459,63 +18234,8 @@ dtype: int64</pre>
       <td>30.8</td>
       <td>Male</td>
     </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>103</th>
-      <td>2020.0</td>
-      <td>Wyoming</td>
-      <td>Obesity / Weight Status</td>
-      <td>Percent of adults aged 18 years and older who ...</td>
-      <td>31.4</td>
-      <td>Female</td>
-    </tr>
-    <tr>
-      <th>104</th>
-      <td>2020.0</td>
-      <td>Guam</td>
-      <td>Obesity / Weight Status</td>
-      <td>Percent of adults aged 18 years and older who ...</td>
-      <td>33.8</td>
-      <td>Male</td>
-    </tr>
-    <tr>
-      <th>105</th>
-      <td>2020.0</td>
-      <td>Guam</td>
-      <td>Obesity / Weight Status</td>
-      <td>Percent of adults aged 18 years and older who ...</td>
-      <td>35.1</td>
-      <td>Female</td>
-    </tr>
-    <tr>
-      <th>106</th>
-      <td>2020.0</td>
-      <td>Puerto Rico</td>
-      <td>Obesity / Weight Status</td>
-      <td>Percent of adults aged 18 years and older who ...</td>
-      <td>28.4</td>
-      <td>Male</td>
-    </tr>
-    <tr>
-      <th>107</th>
-      <td>2020.0</td>
-      <td>Puerto Rico</td>
-      <td>Obesity / Weight Status</td>
-      <td>Percent of adults aged 18 years and older who ...</td>
-      <td>34.1</td>
-      <td>Female</td>
-    </tr>
   </tbody>
 </table>
-<p>106 rows × 6 columns</p>
 </div>
 </div>
 
@@ -20525,17 +18245,17 @@ dtype: int64</pre>
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Organize dataframe by obese average</span>
 <span class="n">highest</span> <span class="o">=</span> <span class="n">o_final_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;Obese Average (%)&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">highest</span>
+<span class="n">highest</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -20553,7 +18273,7 @@ dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[36]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[51]:</div>
 
 
 
@@ -20630,63 +18350,8 @@ dtype: int64</pre>
       <td>39.4</td>
       <td>Female</td>
     </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>2020.0</td>
-      <td>Colorado</td>
-      <td>Obesity / Weight Status</td>
-      <td>Percent of adults aged 18 years and older who ...</td>
-      <td>24.3</td>
-      <td>Male</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>2020.0</td>
-      <td>Colorado</td>
-      <td>Obesity / Weight Status</td>
-      <td>Percent of adults aged 18 years and older who ...</td>
-      <td>24.1</td>
-      <td>Female</td>
-    </tr>
-    <tr>
-      <th>45</th>
-      <td>2020.0</td>
-      <td>Massachusetts</td>
-      <td>Obesity / Weight Status</td>
-      <td>Percent of adults aged 18 years and older who ...</td>
-      <td>23.4</td>
-      <td>Female</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>2020.0</td>
-      <td>Hawaii</td>
-      <td>Obesity / Weight Status</td>
-      <td>Percent of adults aged 18 years and older who ...</td>
-      <td>22.3</td>
-      <td>Female</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>2020.0</td>
-      <td>District of Columbia</td>
-      <td>Obesity / Weight Status</td>
-      <td>Percent of adults aged 18 years and older who ...</td>
-      <td>19.1</td>
-      <td>Male</td>
-    </tr>
   </tbody>
 </table>
-<p>106 rows × 6 columns</p>
 </div>
 </div>
 
@@ -20696,17 +18361,17 @@ dtype: int64</pre>
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Organize by lowest obese average</span>
 <span class="n">lowest</span> <span class="o">=</span> <span class="n">o_final_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;Obese Average (%)&quot;</span><span class="p">)</span>
-<span class="n">lowest</span>
+<span class="n">lowest</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -20724,7 +18389,7 @@ dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[37]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[52]:</div>
 
 
 
@@ -20801,63 +18466,8 @@ dtype: int64</pre>
       <td>24.3</td>
       <td>Male</td>
     </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>83</th>
-      <td>2020.0</td>
-      <td>South Carolina</td>
-      <td>Obesity / Weight Status</td>
-      <td>Percent of adults aged 18 years and older who ...</td>
-      <td>39.4</td>
-      <td>Female</td>
-    </tr>
-    <tr>
-      <th>39</th>
-      <td>2020.0</td>
-      <td>Louisiana</td>
-      <td>Obesity / Weight Status</td>
-      <td>Percent of adults aged 18 years and older who ...</td>
-      <td>39.8</td>
-      <td>Female</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2020.0</td>
-      <td>Alabama</td>
-      <td>Obesity / Weight Status</td>
-      <td>Percent of adults aged 18 years and older who ...</td>
-      <td>40.3</td>
-      <td>Female</td>
-    </tr>
-    <tr>
-      <th>98</th>
-      <td>2020.0</td>
-      <td>West Virginia</td>
-      <td>Obesity / Weight Status</td>
-      <td>Percent of adults aged 18 years and older who ...</td>
-      <td>40.6</td>
-      <td>Male</td>
-    </tr>
-    <tr>
-      <th>51</th>
-      <td>2020.0</td>
-      <td>Mississippi</td>
-      <td>Obesity / Weight Status</td>
-      <td>Percent of adults aged 18 years and older who ...</td>
-      <td>42.8</td>
-      <td>Female</td>
-    </tr>
   </tbody>
 </table>
-<p>106 rows × 6 columns</p>
 </div>
 </div>
 
@@ -20867,7 +18477,7 @@ dtype: int64</pre>
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -20920,7 +18530,7 @@ jp-needs-light-background
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -21017,7 +18627,7 @@ jp-needs-light-background
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
