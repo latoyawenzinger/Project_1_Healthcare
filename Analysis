@@ -1,50 +1,47 @@
-State obesity gender
-# analysis, "Which state in the US has the highest and lowest obesity rates between males and females?"
+State obesity gender 
 
-# West Virginia has the highest obesity rate with %40.6 among males and Mississippi with %42.8 in females
-# Washington D.C. has the lowest rate of obesity with %19.1 in males and Hawaii %22.3 in females
-# The national average of obesity is %32.1
+Question:
+"Which state in the US has the highest and lowest obesity rates between males and females?"
 
-Untitled 
-# Analysis, "Which states is the most active/healthiest in the US?" 
-# "Which state contains the highest and lowest average of adults who are physical activity for the year 2020."
+West Virginia has the highest obesity rate with %40.6 among males and Mississippi with %42.8 in females
+Washington D.C. has the lowest rate of obesity with %19.1 in males and Hawaii %22.3 in females
+The national average of obesity is %32.1
 
-# Porto Rico is the most active location with %45.8 which is %15.2 more than the 2nd most active state being Kentucky. 
-#   Utah coming in last with %15.9 being active
+
+
+
+Physically Active States 
+Question:
+"Which states is the most active/healthiest in the US?" 
+"Which state contains the highest and lowest average of adults who are physical activity for the year 2020."
+
+Porto Rico is the most active location with %45.8 which is %15.2 more than the 2nd most active state being Kentucky. 
+Utah coming in last with %15.9 being active.
+
+
 
 Education data
-# Analysis, "Which state contains the healthiest and least healthy obese adults in the categories of: less than high school, high school graduate, collage gradate, and some college or technical school?"
+
+Question:
+"Which state contains the healthiest and least healthy obese adults in the categories of: less than high school, high school graduate, collage gradate, and some college or technical school?"
 
 # The healthiest states for:
-#     less than highschool: Montana
-#     high school Graduate: Massachusetts
-#     Technical school(STEM) / some college: Hawaii
-#     collage graduate: District of Columbia
+     less than highschool: Montana
+     high school Graduate: Massachusetts
+     Technical school(STEM) / some college: Hawaii
+     collage graduate: District of Columbia
         
 # The unhealthiest states for:
-#     less than highschool: California and Texas
-#     high school Graduate: Mississippi
-#     Technical school(STEM) / some college: close between louissiana and Mississippi
-#     collage graduate: Alabama
+     less than highschool: California and Texas
+     high school Graduate: Mississippi
+     Technical school(STEM) / some college: close between louissiana and Mississippi
+     collage graduate: Alabama
+
+
 
 Analysis:
 •	The average rate of obesity in this data from 2020 is %31.9. With 26/27 out of 53 (DC is its own “state”, includes Guam and Porto Rico) countries passing the national average. 
 •	In Education data we can see a trend where the higher the education a person has in the state the lower the obesity rate the state has. Some states do stay consistent in the data regardless of education, such as Mississippi, Alabama, and Hawaii
 •	Even though Mississippi has the highest rate of obesity in the state they are among the top active states. We can see the same trend with West Virginia and Alabama.
 
-
-Intro
-In this project we will be comparing obesity categories in America. While looking at the data collected from the CDC we came up with a few questions. 
-•	Which location in the US has the highest and lowest obesity rates between males and females?
-•	Which location is the most active/healthiest in the US?
-•	Which state contains the healthiest and least healthy obese adults in the categories of: less than high school, high school graduate, collage gradate, and some college or technical school?
-•	Which state contains the highest and lowest average of adults who are physical activity for the year 2020.
-
-
-
-Conclusion
-Some other key points we came up with in this data is. 
-•	The average rate of obesity in this data from 2020 is %31.9. With 26/27 out of 53 (DC is its own “state”, includes Guam and Porto Rico) countries passing the national average. 
-•	In Education data we can see a trend where the higher the education a person has in the state the lower the obesity rate the state has. Some states do stay consistent in the data regardless of education, such as Mississippi, Alabama, and Hawaii
-•	Even though Mississippi has the highest rate of obesity in the state they are among the top active states. We can see the same trend with West Virginia and Alabama.
 
